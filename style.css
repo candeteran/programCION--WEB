@@ -1,6 +1,8 @@
-body{background-color:cadetblue}
+body{background-color:beige}
 p {color:rgb(14, 13, 13);}
-h1 { position: sticky ; top:0}
-img {position: absolute ;}
+h1 { position: sticky ; 
+    top:0;  
+    background-color:lightblue;}
+img {position: absolute ; left:300px; border-color: 40px;}
 
 
