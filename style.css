@@ -1,36 +1,81 @@
 body{background-color:rgba(240, 205, 249, 0.829)}
 
-p {color:rgb(14, 13, 13);}
+p {color:rgb(14, 13, 13); font-family:Arial, Helvetica, sans-serif;}
 
-h1 { position: sticky ; 
-    top:0; 
-    background-color:rgb(185, 128, 203);}
 
-h5 {position:static ;
-    left: 300px;
+h5 {position: relative; font-family: Arial, Helvetica, sans-serif;}
+
+h6 {position:static ; left: 300px; font-family: Arial, Helvetica, sans-serif;}
+
+.contenedor{position: center;border:40px; border-color: blueviolet;}
+
+p {position:static; left: 650px}
+
+p {border-style: solid; background-color:plum; }
+
+
+/* Personalización de estilos para el carrusel */
+#carouselExample {
+    max-width: 600px; /* Ancho máximo del carrusel */
+    margin: 0 auto; /* Centrar el carrusel en la página */
+}
+
+.carousel-inner {
+    border-radius: 0px; /* Bordes redondeados para las diapositivas */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    /* Color de fondo para los botones de navegación */
+    color: white; /* Color del ícono y del texto del botón */
+    border-radius: 50%; /* Bordes redondeados para los botones de navegación */
+    padding: 10px; /* Espaciado interno para los botones de navegación */
+}
+
+/* Cambio del tamaño de los íconos de navegación */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px; /* Ancho del ícono de navegación */
+    height: 30px; /* Altura del ícono de navegación */
+    font-size: 30px; /* Tamaño de la fuente del ícono de navegación */
+}
+
+/* Estilos CSS para la barra de navegación fija en la parte superior */
+.navbar {
+    position: fixed; /* Fijar la barra de navegación en la parte superior */
+    top: 0; /* Colocar la barra de navegación en la parte superior de la ventana */
+    width: 100%; /* Ancho completo */
+    z-index: 1000; /* Establecer una alta z-index para que esté por encima de otros elementos */
+    background-color: blueviolet;
+}
+
+
+/* Estilos para pantallas más pequeñas (por debajo de 576px) */
+@media only screen and (max-width: 575px) {
+    body {
+        font-size: 14px;
+        /* Estilos específicos para pantallas pequeñas */
+        background-color: rgba(240, 205, 249, 0.829);
     }
-
-.contenedor{
-    text-align: center;
 }
 
-.rubia { 
-    width: 500px; 
-    height: 1%;
-            }
-
-.moverfoto {
-    text-align:left;
-    position:absolute;
-    height: 100px; 
+/* Estilos para pantallas medianas (768px y superior) */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+        /* Estilos específicos para pantallas medianas */
+        background-color:rgba(240, 205, 249, 0.829) ;
+    }
 }
 
-.bio {
-    width: 300px; 
-    text-align: start;
+/* Estilos para pantallas grandes (992px y superior) */
+@media only screen and (min-width: 992px) {
+    body {
+        font-size: 20px;
+        /* Estilos específicos para pantallas grandes */
+        background-color:rgba(240, 205, 249, 0.829) ;
+    }
 }
 
-p {position:static; left: 600px}
 
-p {border-style: solid;}
 
