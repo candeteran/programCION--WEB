@@ -14,7 +14,6 @@ p {position:static; left: 650px}
 p {border-style: solid; background-color:plum; }
 
 
-
 /* Personalización de estilos para el carrusel */
 #carouselExample {
     max-width: 100px; /* Ancho máximo del carrusel */
@@ -104,5 +103,63 @@ p {border-style: solid; background-color:plum; }
     }
 }
 
+.suscripcion { position:sticky ;font-family: Arial, Helvetica, sans-serif; color:black; font-size: 30px;
+    border:solid rgb(9, 8, 10); background-color: rgb(199, 104, 194);
+
+}
+
+footer{
+    background-color: #000;
+    text-align: center;
+    color: ghostwhite;
+    padding: 0.02rem;
+}
+
+.foot{
+    height: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 1%;
+    position: relative;
+}
+
+.container-cart{
+    justify-content: center;
+    display: inline-block; /* Agrega esta propiedad para alinearlos horizontalmente */
+    padding: 10px; /* Reducir el espacio interno */
+}
+
+.card-img-top {
+    max-width: 300px; /* Tamaño máximo deseado */
+    height: auto; /* Mantiene la proporción original */
+    position: relative;
+    margin: auto;
+}
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px; /* Reducir el espacio interno */
+    text-align: center;
+    width: 150px; /* Reducir el ancho */
+    margin-right: 10px; /* Reducir el margen derecho */
+    display: inline-block; /* Agrega esta propiedad para alinearlos horizontalmente */
+    vertical-align: top; /* Alinea los elementos en la parte superior */
+}
 
 
+#colorcarro{
+    background-color: rgba(240, 205, 249, 0.829);
+}
+
+.image-container {
+    text-align: center; /* Centra horizontalmente */
+    vertical-align: middle; /* Centra verticalmente */
+    height: 150px; /* Ajusta la altura del contenedor según tus necesidades */
+}
+
+.product-image {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen para que se ajuste al contenedor */
+    max-height: 100%; /* Ajusta el tamaño máximo de la imagen para que se ajuste al contenedor */
+    display: inline-block; /* Permite centrar verticalmente */
+    vertical-align: middle; /* Centra verticalmente */
+}
