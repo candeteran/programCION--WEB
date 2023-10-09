@@ -44,7 +44,7 @@ p {border-style: solid; background-color:plum; }
 
 
 
-/* Estilos CSS para la barra de navegación fija en la parte superior */
+
 .navbar {
     position: fixed; /* Fijar la barra de navegación en la parte superior */
     top: 0; /* Colocar la barra de navegación en la parte superior de la ventana */
@@ -61,6 +61,14 @@ p {border-style: solid; background-color:plum; }
         /* Estilos específicos para pantallas pequeñas */
         background-color: rgba(240, 205, 249, 0.829);
     }
+    .carousels-container {
+        display: flex;
+        flex-direction: column; 
+    }
+    #carouselExampleIndicators,
+    #carouselizquierdo {
+        width: 100%; 
+    }
 }
 
 /* Estilos para pantallas medianas (768px y superior) */
@@ -68,17 +76,25 @@ p {border-style: solid; background-color:plum; }
     body {
         font-size: 18px;
         /* Estilos específicos para pantallas medianas */
-        background-color:rgba(240, 205, 249, 0.829) ;
-    }
+        background-color:rgba(205, 249, 218, 0.829) ;
+        .suscripcion{ background-color: lightgreen}
+        p {background-color: lightgreen;}
+}
+p {background-color: lightgreen;}
+
 }
 
+
 /* Estilos para pantallas grandes (992px y superior) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) { 
     body {
         font-size: 20px;
         /* Estilos específicos para pantallas grandes */
         background-color:rgba(240, 205, 249, 0.829) ;
+        .suscripcion{ background-color: plum }
     }
+    p {background-color: plum;};
+    .suscripcion{ background-color: plum}
 }
 
 .suscripcion { position:sticky ;font-family: Arial, Helvetica, sans-serif; color:black; font-size: 30px;
