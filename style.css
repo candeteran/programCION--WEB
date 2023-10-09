@@ -2,7 +2,6 @@ body{background-color:rgba(240, 205, 249, 0.829)}
 
 p {color:rgb(14, 13, 13); font-family:Arial, Helvetica, sans-serif;}
 
-
 h5 {position: relative; font-family: Arial, Helvetica, sans-serif;}
 
 h6 {position:static ; left: 300px; font-family: Arial, Helvetica, sans-serif;}
@@ -15,15 +14,14 @@ p {border-style: solid; background-color:plum; }
 
 
 .carousels-container {
-    display: flex; /* Utiliza un contenedor flexible para alinear los carruseles horizontalmente */
+    display: flex; 
 }
 
 
 #carouselExampleIndicators,
 #carouselizquierdo {
-    width: 50%; /* Ancho igual para ambos carruseles (ajusta según lo necesites) */
-    flex: 0 0 auto; /* Evita que los carruseles se estiren para adaptarse al ancho del contenedor */
-}
+    width: 50%; 
+    flex: 0 0 auto; }
 
 
 .container {
@@ -43,13 +41,11 @@ p {border-style: solid; background-color:plum; }
 }
 
 
-
-
 .navbar {
-    position: fixed; /* Fijar la barra de navegación en la parte superior */
-    top: 0; /* Colocar la barra de navegación en la parte superior de la ventana */
-    width: 100%; /* Ancho completo */
-    z-index: 1000; /* Establecer una alta z-index para que esté por encima de otros elementos */
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 1000; 
     background-color: blueviolet;
 }
 
@@ -119,25 +115,25 @@ footer{
 
 .container-cart{
     justify-content: center;
-    display: inline-block; /* Agrega esta propiedad para alinearlos horizontalmente */
-    padding: 10px; /* Reducir el espacio interno */
+    display: inline-block; 
+    padding: 10px;
 }
 
 .card-img-top {
-    max-width: 300px; /* Tamaño máximo deseado */
-    height: auto; /* Mantiene la proporción original */
+    max-width: 300px; 
+    height: auto; 
     position: relative;
     margin: auto;
 }
 
 .product {
     border: 1px solid #ccc;
-    padding: 10px; /* Reducir el espacio interno */
+    padding: 10px; 
     text-align: center;
-    width: 150px; /* Reducir el ancho */
-    margin-right: 10px; /* Reducir el margen derecho */
-    display: inline-block; /* Agrega esta propiedad para alinearlos horizontalmente */
-    vertical-align: top; /* Alinea los elementos en la parte superior */
+    width: 150px; 
+    margin-right: 10px; 
+    display: inline-block; 
+    vertical-align: top; 
 }
 
 
@@ -146,14 +142,14 @@ footer{
 }
 
 .image-container {
-    text-align: center; /* Centra horizontalmente */
-    vertical-align: middle; /* Centra verticalmente */
-    height: 150px; /* Ajusta la altura del contenedor según tus necesidades */
+    text-align: center; 
+    vertical-align: middle; 
+    height: 150px; 
 }
 
 .product-image {
-    max-width: 100%; /* Ajusta el tamaño máximo de la imagen para que se ajuste al contenedor */
-    max-height: 100%; /* Ajusta el tamaño máximo de la imagen para que se ajuste al contenedor */
-    display: inline-block; /* Permite centrar verticalmente */
-    vertical-align: middle; /* Centra verticalmente */
+    max-width: 100%; 
+    max-height: 100%;
+    display: inline-block; 
+    vertical-align: middle; 
 }
