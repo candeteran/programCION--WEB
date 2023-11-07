@@ -3,18 +3,140 @@ function saludar() {
     alert("¡¡Cada tanto hay 2x1 en toda la web!! No te pierdas todas las novedades y suscribite a nuestro newsletter");
 }
 
-/* funciones para el carrito de precio y combos*/
+var carrito = pickearCarritoGuardado();
+actualizarCarrito()
+var agregarCarritoButtons = document.getElementsByClassName('agregar-carrito');
+for (var i = 0; i < agregarCarritoButtons.length; i++) {
+    agregarCarritoButtons[i].addEventListener('click', agregarProductoAlCarrito);
+}
 
-var carrito = [];
-var total = 0;
+var botonVaciar = document.getElementById('boton-vaciar');
+botonVaciar.addEventListener('click', vaciarCarrito);
+
+
+function agregarProductoAlCarrito(evento) {
+    var button = evento.target;
+    var producto = button.parentElement.parentElement;
+    var titulo = producto.getElementsByClassName('card-title')[0].innerText;
+    var precio = producto.getElementsByClassName('card-text')[0].innerText;
+    var precio = precio.substring(1) 
+    var productoAgregado = {
+        titulo: titulo,
+        precio: precio,
+    };
+    carrito.push(productoAgregado);
+    actualizarCarrito();
+    guardarCarritoEnLocalStorage();
+    
+}
 
 function actualizarCarrito() {
-    // Actualiza el HTML del carrito
-    var carritoElement = document.querySelector('.container-cart-products');
-    var noProductosElement = document.querySelector('#no-productos');
-    var cartTotalElement = document.querySelector('#cart-total');
-    var cantidadElement = document.querySelector('#cantidad');
-    var comprarBtn = document.querySelector('#comprarBtn');
+    var carritoContainer = document.getElementById('carrito');
+    carritoContainer.innerHTML = '';
+    for (var i = 0; i < carrito.length; i++) {
+        var producto = carrito[i];
+        var carritoElemento = document.createElement('li');
+        carritoElemento.classList.add('list-group-item');
+        var contenido = `
+            <span>${producto.titulo}</span>
+            <span>$${producto.precio}</span>
+        `;
+        carritoElemento.innerHTML = contenido;
+        carritoContainer.appendChild(carritoElemento);
+    }
+    calcularTotal();
+}
+
+function calcularTotal() {
+    var total = 0;
+    for (var i = 0; i < carrito.length; i++) {
+        total += parseInt(carrito[i].precio);
+    }
+    var totalElemento = document.getElementById('total');
+    totalElemento.innerText = total;
+}
+
+function vaciarCarrito() {
+    carrito = [];
+    actualizarCarrito();
+    guardarCarritoEnLocalStorage()
+}
+
+function pickearCarritoGuardado() {
+    var carritoGuardado = localStorage.getItem('carrito');
+    if (carritoGuardado) {
+        return JSON.parse(carritoGuardado); 
+    } else {
+        return [];
+    }
+    
+}
+
+function guardarCarritoEnLocalStorage() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function finalizarCompra () {
+    var totalElemento = document.getElementById('total')
+    var tot = totalElemento.innerText;
+    if(carrito.length === 0 ) {
+        alert("No ha seleccionado nada para comprar")
+    }else {
+        alert("Precio final $" + tot )
+        alert("¡GRACIAS POR SU COMPRA!")
+        vaciarCarrito()
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* funciones para el carrito de precio y combos
+
+// Variables globales para el carrito y el total
+var carrito = [];
+var total = 0;
+*/
+
+// Función para actualizar el carrito en el HTML
+/*function actualizarCarrito() {
+    var carritoElement = document.querySelector('.Colorcarro');
+    carritoElement.innerHTML = '';
 
     if (carrito.length === 0) {
         var noProductosElement = document.querySelector('#no-productos');
@@ -42,70 +164,62 @@ function actualizarCarrito() {
     }
 }
 
+// Función para agregar un producto al carrito
+function comprarProducto1() {
+    var producto = {
+        id: 1,
+        nombre: 'Shampoo Sólido',
+        precio: 1800,
+        cantidad: 1
+    };
+    agregarAlCarrito(producto);
+}
 
-function comprar(productoId) {
-        var productos = {
-            1: { nombre: 'Shampoo Sólido', precio: 1800 },
-            2: { nombre: 'Acondicionador Sólido', precio: 2000 },
-            3: { nombre: 'Combo', precio: 3200 },
-            4: { nombre: 'Tabla de Madera', precio: 2500 }
-        };
-    
-        if (productos[productoId]) {
-            var producto = productos[productoId];
-            var productoExistente = carrito.find(item => item.id === productoId);
-    
-            if (productoExistente) {
-                productoExistente.cantidad++;
-            } else {
-                carrito.push({
-                    id: productoId,
-                    nombre: producto.nombre,
-                    precio: producto.precio,
-                    cantidad: 1
-                });
-            }
-    
-            total += producto.precio;
-        }
-    }
+function comprarProducto2() {
+    var producto = {
+        id: 2,
+        nombre: 'Acondicionador Sólido',
+        precio: 2000,
+        cantidad: 1
+    };
+    agregarAlCarrito(producto);
+}
 
-//vaciar carrito:
+function comprarProducto3() {
+    var producto = {
+        id: 3,
+        nombre: 'Combo',
+        precio: 3200,
+        cantidad: 1
+    };
+    agregarAlCarrito(producto);
+}
 
+function comprarProducto4() {
+    var producto = {
+        id: 4,
+        nombre: 'Tabla de Madera',
+        precio: 2500,
+        cantidad: 1
+    };
+    agregarAlCarrito(producto);
+}
+
+
+
+// Función para vaciar el carrito
 function vaciar() {
     carrito = [];
     total = 0;
     actualizarCarrito();
 }
 
+// Función para finalizar la compra
 function finalizarCompra() {
-  // Obtén las referencias a los elementos HTML que necesitas
-var nombreInput = document.getElementById("nombre");
-var apellidoInput = document.getElementById("apellido");
-var termsCheckbox = document.getElementById("termsCheckbox");
-
-  // Verifica si se han completado los campos requeridos
-if (!nombreInput.value || !apellidoInput.value) {
-    alert("Por favor, completa todos los campos requeridos.");
-    return;
-}
-
-  // Verifica si se ha aceptado los términos y condiciones
-if (!termsCheckbox.checked) {
-    alert("Debes aceptar los términos y condiciones para continuar.");
-    return;
-}
-
+    // Aquí puedes agregar la lógica para finalizar la compra, como enviar una solicitud de compra o realizar otras acciones.
+    // Puedes utilizar los datos en "carrito" para completar la compra.
 
     vaciar();
 }
-
-
-// Vincula el botón "Vaciar carrito" a la función vaciar
-var vaciarBtn = document.querySelector('button.btn.btn-danger');
-vaciarBtn.addEventListener('click', vaciar);
-
-// Vincula el botón "Finalizar Compra" a la función finalizarCompra
-var finalizarBtn = document.querySelector('#finalizarBtn');
-finalizarBtn.addEventListener('click', finalizarCompra);
+*/
 

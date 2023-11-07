@@ -50,88 +50,73 @@
             <br>
             <br>
             <br>
-        <div class="Colorcarro">    
-            <div class="col">
-                <div class="card text-center"> 
-                    <img src="https://i.pinimg.com/564x/33/d8/8c/33d88ca2b261ad4bf09154fc63457daa.jpg" class="card-img-top mx-auto" alt="SHAMPOO">
 
-                    <div class="card-body">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/45/44/97/454497000e1c3ea07ffa27a9c706f44a.jpg" class="card-img-top" alt="Acondicionador">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Acondicionador Sólido</b></h5>
+                            <div class="Pyboton">
+                                <h4 class="card-text">$2000</h4>
+                                <button class="btn btn agregar-carrito" id="agregarcarro">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/77/9d/5f/779d5f64b0e70005a9783b625fd5f790.jpg" class="card-img-top" alt="combo">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>COMBO</b></h5>
+                            <div class="Pyboton">
+                                <h4 class="card-text">$3200</h4>
+                                <button class="btn btn agregar-carrito" id="agregarcarro">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/77/2d/1c/772d1c252116fb8222c4a31a06566716.jpg" class="card-img-top" alt="Tablita">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Tablita de Madera</b></h5>
+                            <div class="Pyboton">
+                                <h4 class="card-text">$2500</h4>
+                                <button class="btn btn agregar-carrito" id="agregarcarro">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://i.pinimg.com/564x/33/d8/8c/33d88ca2b261ad4bf09154fc63457daa.jpg" class="Shampoo">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>Shampoo Sólido</b></h5>
+                            <div class="Pyboton">
+                                <h4 class="card-text">$1800</h4>
+                                <button class="btn btn agregar-carrito" id="agregarcarro">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                        <h6 class="card-subtitle mb-2 text-muted">Shampoo sólido</h6>
-                        <p class="card-text">$1800</p>
-                        <button type="button" onclick="comprar(1)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(1)" class="card-link btn-add-cart">-</button>
-                    </div>
-                </div>
-            </div>
             <br>
-            <div class="col">
-                <div class="card text-center">
-                    <img src="https://i.pinimg.com/564x/66/ef/c1/66efc1fc325271a4ad46d04774d3ddb7.jpg" class="card-img-top mx-auto" alt="acondicionador">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Acondicionador sólido</h6>
-                        <p class="card-text">$2000</p>
-                        <button type="button" onclick="comprar(2)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(2)" class="card-link btn-add-cart">-</button>
-                    </div>
-                </div>
-            </div>
+        </div>
+    
+        <div id="mySidenav" class="sidenav">
             <br>
-            <div class="col">
-                <div class="card text-center">
-                    <img src="https://i.pinimg.com/564x/77/9d/5f/779d5f64b0e70005a9783b625fd5f790.jpg" class="card-img-top mx-auto" alt="Combo">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">COMBO</h6>
-                        <p class="card-text">$3200</p>
-                        <button type="button" onclick="comprar(3)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(3)" class="card-link btn-add-cart">-</button>
-                    </div>
-                </div>
-            </div>
             <br>
-            <div class="col">
-                <div class="card text-center">
-                    <img src="https://i.pinimg.com/564x/77/2d/1c/772d1c252116fb8222c4a31a06566716.jpg" class="card-img-top mx-auto" alt="tabla">
-                    <div class="card-body">
-                        <h6 class="card-subtitle mb-2 text-muted">Tabla madera</h6>
-                        <p class="card-text">$2500</p>
-                        <button type="button" onclick="comprar(4)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(4)" class="card-link btn-add-cart">-</button>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="container-cart">
-                <div class="container-cart-icon"></div>
-                <div class="container-cart-products hidden-cart">
-                    <div class="cart-empty hidden">
-                        <p id="no-productos">No hay productos en el carrito.</p>
-                    </div>
-                    <div class="row-product"></div>
-                    <div class="cart-total">
-                        <p>Total: $<span id="cart-total">0</span></p>
-                        <p>Productos en el carrito: <span id="cantidad">0</span></p>
-                    </div>
-                    <button type="button" class="btn btn-danger" onclick="vaciar()">Vaciar carrito</button>
-                    <button type="button" class="btn btn-success" id="comprarBtn" >Comprar</button>
-                </div>
-            </div>
-            
-            <div id="popup" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>¿Desea realizar una compra?</h3>
-                    <label for="nombre">Nombre:</label>
-                    <input id="nombre" type="text"><br><br>
-                    <label for="apellido">Apellido:</label>
-                    <input id="apellido" type="text"><br><br>
-                    <label>
-                    <input id="termsCheckbox" type="checkbox"> Acepto los términos y condiciones
-                    </label><br><br>
-                    <button id="finalizarBtn">Finalizar Compra</button>
-                </div>
+            <h2 class="espaciado">Carrito</h2>
+            <ul id="carrito" class="list-group"></ul>
+            <hr>
+            <p class="text-right">Total: $<span id="total"></span></p>
+            <div>
+                <button id="boton-vaciar" class="btn btn-danger" id="vacio">Vaciar</button>
+                <button type="button" class="btn btn-success" id="comprarBtn" onclick="finalizarCompra()">Comprar</button>
             </div>
         </div>
+        
 
         <br>
         <footer>
@@ -141,7 +126,7 @@
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         </main>
-
+        <script src="miJava.js"></script> 
     </body>
 
 </html>

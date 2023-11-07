@@ -54,7 +54,6 @@ p {border-style: solid; background-color:plum;  }
 @media only screen and (max-width: 575px) {
     body {
         font-size: 50%;
-        /* Estilos específicos para pantallas pequeñas */
         background-color: rgba(240, 205, 249, 0.829);
     }
     .carousels-container {
@@ -81,7 +80,6 @@ p {border-style: solid; background-color:plum;  }
 @media only screen and (min-width: 768px) {
     body {
         font-size: 100%;
-        /* Estilos específicos para pantallas medianas */
         background-color:rgba(205, 249, 218, 0.829) ;
         .suscripcion{ background-color: lightgreen}
         p {background-color: lightgreen;}
@@ -95,7 +93,6 @@ p {background-color: lightgreen;}
 @media only screen and (min-width: 992px) { 
     body {
         font-size: 100%;
-        /* Estilos específicos para pantallas grandes */
         background-color:rgba(240, 205, 249, 0.829) ;
         .suscripcion{ background-color: plum }
     }
@@ -170,3 +167,13 @@ footer{
     display: block;
     margin: 0 auto;
 }
+
+#agregarcarro {
+    color: violet; 
+    font-weight: bold; 
+}
+
+.btn{
+    font-weight: bold;
+}
+
