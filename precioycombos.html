@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="miJava.js"></script>
 
-    <title>Sección dos </title>
+    <title>Tienda online </title>
 </head>
 
     <body>
@@ -58,8 +59,8 @@
 
                         <h6 class="card-subtitle mb-2 text-muted">Shampoo sólido</h6>
                         <p class="card-text">$1800</p>
-                        <button type="button" onclick="comprar(35)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(35)" class="card-link btn-add-cart">-</button>
+                        <button type="button" onclick="comprar(1)" class="card-link btn-add-cart">+</button>
+                        <button type="button" onclick="descomprar(1)" class="card-link btn-add-cart">-</button>
                     </div>
                 </div>
             </div>
@@ -70,8 +71,8 @@
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Acondicionador sólido</h6>
                         <p class="card-text">$2000</p>
-                        <button type="button" onclick="comprar(10)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(10)" class="card-link btn-add-cart">-</button>
+                        <button type="button" onclick="comprar(2)" class="card-link btn-add-cart">+</button>
+                        <button type="button" onclick="descomprar(2)" class="card-link btn-add-cart">-</button>
                     </div>
                 </div>
             </div>
@@ -82,8 +83,8 @@
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">COMBO</h6>
                         <p class="card-text">$3200</p>
-                        <button type="button" onclick="comprar(5)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(5)" class="card-link btn-add-cart">-</button>
+                        <button type="button" onclick="comprar(3)" class="card-link btn-add-cart">+</button>
+                        <button type="button" onclick="descomprar(3)" class="card-link btn-add-cart">-</button>
                     </div>
                 </div>
             </div>
@@ -94,8 +95,8 @@
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Tabla madera</h6>
                         <p class="card-text">$2500</p>
-                        <button type="button" onclick="comprar(21)" class="card-link btn-add-cart">+</button>
-                        <button type="button" onclick="descomprar(21)" class="card-link btn-add-cart">-</button>
+                        <button type="button" onclick="comprar(4)" class="card-link btn-add-cart">+</button>
+                        <button type="button" onclick="descomprar(4)" class="card-link btn-add-cart">-</button>
                     </div>
                 </div>
             </div>
@@ -112,7 +113,7 @@
                         <p>Productos en el carrito: <span id="cantidad">0</span></p>
                     </div>
                     <button type="button" class="btn btn-danger" onclick="vaciar()">Vaciar carrito</button>
-                    <button type="button" class="btn btn-success" id="comprarBtn" disabled>Comprar</button>
+                    <button type="button" class="btn btn-success" id="comprarBtn" >Comprar</button>
                 </div>
             </div>
             

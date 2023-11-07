@@ -163,3 +163,10 @@ footer{
     display: inline-block; 
     vertical-align: middle; 
 }
+
+/* java */
+
+#datoCuriosoBtn {
+    display: block;
+    margin: 0 auto;
+}
