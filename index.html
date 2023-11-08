@@ -30,15 +30,22 @@
         ¡La nueva forma, más sustentable, de cuidarte el pelo y cuidarte a vos!
       </h6>
 
-      <div class="texto">
-        <p class="text-center">
-          Sólido Vegano es un emprendimiento familiar destinado a la
-          concientización acerca del uso de Shampoo y acondicionadores
-          ecológicos. De esta forma, fomentamos el cuidado del medioambiente y a
-          su vez, el cuidado de tu pelo. Se trata de un formato de shampoo sólido, más cómodo y más duradero que otros. 
-          <br class="fw-bold">¿Sabías que los shampoo y acondicionadores en crema tienen 10 veces más parabenos y químicos? 
-        </p>
-      </div>
+
+      <button id="InfoBtn" onclick="abrirModalero()">SOBRE NOSOTROS</button>
+
+      <div id="modalero" class="modalero">
+        <div class="modalero-content">
+            <p text-center>Sólido Vegano es un emprendimiento familiar destinado a la concientización acerca del uso de Shampoo y acondicionadores ecológicos. <br> 
+              De esta forma, fomentamos el cuidado del medioambiente y a su vez, el cuidado de tu pelo. <br>
+              Se trata de un formato de shampoo sólido, más cómodo y más duradero que otros. <br>
+              ¿Sabías que los shampoo y acondicionadores en crema tienen 10 veces más parabenos y químicos?
+            </p>
+            <button onclick="cerrarModalero()">Cerrar</button>
+        </div>
+    </div>
+    
+    <br>
+
 
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -224,8 +231,17 @@
             </button>
           </div>
       </div>
-      
-      <button id="datoCuriosoBtn" onclick="saludar()">Dato curioso</button>
+
+      <button id="datoCuriosoBtn" onclick="abrirModal()">Dato curioso</button>
+
+      <div id="modal" class="modal">
+          <div class="modal-content">
+              <p text-center>¡¡Cada tanto hay 2x1 en toda la web!! <br> No te pierdas todas las novedades y suscribite a nuestro newsletter
+              </p>
+              <button onclick="cerrarModal()">Cerrar</button>
+          </div>
+      </div>
+
             
     </main>
 

@@ -1,6 +1,23 @@
 /* funcion para el botón del inicio*/
-function saludar() {
-    alert("¡¡Cada tanto hay 2x1 en toda la web!! No te pierdas todas las novedades y suscribite a nuestro newsletter");
+
+function abrirModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "block";
+}
+
+function cerrarModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+
+function abrirModalero() {
+    var modal = document.getElementById("modalero");
+    modal.style.display = "block";
+}
+
+function cerrarModalero() {
+    var modal = document.getElementById("modalero");
+    modal.style.display = "none";
 }
 
 var carrito = pickearCarritoGuardado();
@@ -87,6 +104,12 @@ function finalizarCompra () {
         vaciarCarrito()
 
     }
+}
+
+//contacto
+
+function checkout(){
+    alert('Seguro que desea guardar sus datos?')
 }
 
 

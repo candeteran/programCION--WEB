@@ -166,7 +166,63 @@ footer{
 #datoCuriosoBtn {
     display: block;
     margin: 0 auto;
+    border-radius: 15px;
+    font-weight: bold; 
+
 }
+
+#InfoBtn {
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    font-weight: bold; 
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modalero {
+    z-index: 9999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10000;
+}
+
 
 #agregarcarro {
     color: violet; 
@@ -177,3 +233,15 @@ footer{
     font-weight: bold;
 }
 
+#datocurioso{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}

@@ -50,3 +50,8 @@
             </div>
 
 https://i.pinimg.com/564x/6a/2f/a2/6a2fa2550267ea712611e3628239786b.jpg
+
+
+<div class="datocurioso">
+    <button id="datoCuriosoBtn" onclick="saludar()">Dato curioso</button>
+</div>
