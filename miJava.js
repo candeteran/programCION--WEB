@@ -1,4 +1,4 @@
-/* funcion para el botón del inicio*/
+// Funciones para el carrito
 
 function abrirModal() {
     var modal = document.getElementById("modal");
