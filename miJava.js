@@ -112,6 +112,20 @@ function checkout(){
     alert('Seguro que desea guardar sus datos?')
 }
 
+//comentarios
+
+function borrarComentario(){
+    var comentario = document.getElementById('floatingTextarea2').value;
+    if (comentario.trim() !== '') {
+
+        document.getElementById('floatingTextarea2').value = '';
+        alert('Se enviará el comentario!')
+    } else {
+        alert('No hay comentario para borrar/enviar.');
+    }
+}
+
+
 
 
 
