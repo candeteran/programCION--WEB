@@ -18,6 +18,19 @@ p {border-style: solid; background-color:plum;  }
     display: flex; 
 }
 
+
+.contenedordeGif{
+    text-align: center;
+}
+
+.gif {
+    display: inline-block; 
+    width: 400px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+
 #carouselExampleIndicators,
 #carouselizquierdo {
     width: 50%; 
@@ -72,6 +85,11 @@ p {border-style: solid; background-color:plum;  }
 .container {
     text-align: center; 
     margin-top: -20px; 
+}
+
+.gif {
+    width: 100%; 
+    margin-right: 0; 
 }
 
 }
